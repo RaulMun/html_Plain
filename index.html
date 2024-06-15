@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login mio</title>
+    <link rel="stylesheet" href="algobien.css">
+</head>
+<body>
+    <div class="login-container">
+        <form action="">
+            <div class="inner-container">
+                <label for="username">Usuario</label>
+                <input id="username" type="text">
+            </div>
+            <div class="inner-container">
+                <label for="password">Contraseña</label>
+                <input id="password" type="password">
+            </div>
+            <div class="inner-container">
+                <button onclick="login()">Login</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <label class="text-mignon">Propiedad de raul, no tocar excepto raul</label>
+    </div>
+</body>
+
+<script>
+    function login(){
+        event.preventDefault();
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        console.log({username, password});
+
+        if(username === "Raul" && password === "algobien"){
+            alert("Bienvenue")
+        } else {
+            alert("o no, nadota")
+        }
+    }
+</script>
+</html>
